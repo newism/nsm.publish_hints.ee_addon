@@ -3,12 +3,13 @@
 /**
  * Config file for NSM Publish Hints
  *
- * @package			NSMPublishHints
+ * @package			NsmPublishHints
  * @version			1.0.0RC1
  * @author			Leevi Graham <http://leevigraham.com>
- * @link			http://github.com/newism/nsm.publish_hints.ee-addon
  * @copyright 		Copyright (c) 2007-2010 Newism
  * @license 		Commercial - please see LICENSE file included with this distribution
+ * @link			http://expressionengine-addons.com/nsm-publish-hints
+ * @see				http://expressionengine-addons.com/nsm-addon-updater
  */
 
 $config['name'] 	= "NSM Publish Hints";

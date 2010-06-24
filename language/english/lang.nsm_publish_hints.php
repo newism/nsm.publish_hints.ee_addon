@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * NSM Publish Hints Language File
+ *
+ * @package			NsmPublishHints
+ * @version			1.0.0RC1
+ * @author			Leevi Graham <http://leevigraham.com>
+ * @copyright 		Copyright (c) 2007-2010 Newism
+ * @license 		Commercial - please see LICENSE file included with this distribution
+ * @link			http://expressionengine-addons.com/nsm-publish-hints
+ * @see				http://expressionengine.com/public_beta/docs/development/modules.html#lang_file
+ */
+
 $lang = array(
 
 	/* Module */

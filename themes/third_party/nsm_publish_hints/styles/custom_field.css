@@ -1,0 +1,28 @@
+/**
+ * Custom field styles for NSM Publish Hints
+ *
+ * @package			NSMPublishHints
+ * @version			1.0.0RC1
+ * @author			Leevi Graham <http://leevigraham.com>
+ * @link			http://github.com/newism/nsm.publish_hints.ee-addon
+ * @copyright 		Copyright (c) 2007-2010 Newism
+ * @license 		Commercial - please see LICENSE file included with this distribution
+ */
+.nsm-publish-hints{
+	background-color:#fffcbf;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, 0)));
+	background-image:-moz-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+	border:1px solid #ccc;
+	font-size:11px;
+	margin-top:9px;
+	padding:15px;
+	-webkit-box-shadow:0 2px 3px #fff;
+	text-shadow:0 1px 0 #fff;
+}
+.nsm-publish-hints > :first-child{margin-top:0; padding-top:0; border-top:0;}
+.nsm-publish-hints > :last-child{margin-bottom:0;}
+.nsm-publish-hints p{margin:1.2em 0;}
+.nsm-publish-hints h2{border-top:1px dotted #e5e3ac; margin:1.2em 0; font-size:13px; padding-top:9px;}
+.nsm-publish-hints h3{margin:1.2em 0; font-size:11px}
+.nsm-publish-hints ol{margin:1.2em 3em;}
+.nsm-publish-hints ul{margin:1.2em 3em;}

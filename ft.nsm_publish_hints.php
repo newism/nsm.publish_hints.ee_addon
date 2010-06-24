@@ -132,7 +132,9 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	public function display_settings($field_settings)
 	{
 		if(!isset($field_settings['field_publishing_hints'])) return FALSE;
-		return '<script type="text/javascript" charset="utf-8">ins = \''.str_replace("\n", "\\ \n", htmlentities($field_settings['field_publishing_hints'], ENT_QUOTES, "UTF-8")) . '\' $("#field_instructions").text(ins);</script>';
+		$r = "<div id='nsm-publish-hints' style='display:none'>{$field_settings['field_publishing_hints']}</div>\n";
+		$r .= '<script type="text/javascript" charset="utf-8">$("#field_instructions").text($("#nsm-publish-hints").html());</script>';
+		return $r;
 	}
 
 	/**

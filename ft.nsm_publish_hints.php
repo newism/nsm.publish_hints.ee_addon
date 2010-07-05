@@ -92,7 +92,8 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 		$EE = get_instance();
 		$theme_url = (rtrim($EE->config->item('theme_folder_url'), '/')) . '/third_party/' . $this->field_type;
 		$EE->cp->add_to_head('<link rel="stylesheet" href="'.$theme_url.'/styles/custom_field.css" type="text/css" charset="utf-8" />');
-		return "<div class='nsm-publish-hints'>{$this->settings["field_publishing_hints"]}</div>";
+		$hints = isset($this->settings["field_publishing_hints"]) ? $this->settings["field_publishing_hints"] : FALSE;
+		return "<div class='nsm-publish-hints'>{$hints}</div>";
 	}
 
 	/**

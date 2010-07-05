@@ -109,19 +109,19 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	}
 
 
-	/**
-	 * Display a global settings page. The current available global settings are in $this->settings.
-	 *
-	 * @access public
-	 * @return string The global settings form HTML
-	 */
-	public function display_global_settings()
-	{
-		$EE = get_instance();
-		$vars["css"] = isset($this->settings["css"]) ? $this->settings["css"] : "";
-		$vars["input_prefix"] = __CLASS__;
-		return $EE->load->view('partials/field_settings', $vars, TRUE);;
-	}
+	// /**
+	//  * Display a global settings page. The current available global settings are in $this->settings.
+	//  *
+	//  * @access public
+	//  * @return string The global settings form HTML
+	//  */
+	// public function display_global_settings()
+	// {
+	// 	$EE = get_instance();
+	// 	$vars["css"] = isset($this->settings["css"]) ? $this->settings["css"] : "";
+	// 	$vars["input_prefix"] = __CLASS__;
+	// 	return $EE->load->view('partials/field_settings', $vars, TRUE);;
+	// }
 	
 	/**
 	 * Display the settings form for each custom field

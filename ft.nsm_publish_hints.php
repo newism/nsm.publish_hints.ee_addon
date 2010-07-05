@@ -20,7 +20,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 * @var array
 	 */
 	public $info = array(
-		'name'		=> 'NSM Publish Hints: Fieldtype',
+		'name'		=> 'NSM Publish Hints',
 		'version'	=> '1.0.0RC1'
 	);
 

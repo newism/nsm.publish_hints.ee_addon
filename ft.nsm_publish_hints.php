@@ -35,6 +35,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 * @var array
 	 */
 	public $settings = array();
+	public $has_global_settings = true;
 
 	/**
 	 * The field type - used for form field prefixes. Must be unique and match the class name. Set in the constructor
@@ -43,6 +44,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 * @var string
 	 */
 	public $field_type = '';
+
 
 	/**
 	 * Constructor
@@ -92,6 +94,10 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 		$EE = get_instance();
 		$theme_url = (rtrim($EE->config->item('theme_folder_url'), '/')) . '/third_party/' . $this->field_type;
 		$EE->cp->add_to_head('<link rel="stylesheet" href="'.$theme_url.'/styles/custom_field.css" type="text/css" charset="utf-8" />');
+
+		if(isset($this->settings['css']) && !empty($this->settings['css']))
+			$EE->cp->add_to_head('<style type="text/css" media="screen">'.$this->settings['css'].'</style>');
+
 		$hints = isset($this->settings["field_publishing_hints"]) ? $this->settings["field_publishing_hints"] : FALSE;
 		return "<div class='nsm-publish-hints'>{$hints}</div>";
 	}
@@ -109,19 +115,19 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	}
 
 
-	// /**
-	//  * Display a global settings page. The current available global settings are in $this->settings.
-	//  *
-	//  * @access public
-	//  * @return string The global settings form HTML
-	//  */
-	// public function display_global_settings()
-	// {
-	// 	$EE = get_instance();
-	// 	$vars["css"] = isset($this->settings["css"]) ? $this->settings["css"] : "";
-	// 	$vars["input_prefix"] = __CLASS__;
-	// 	return $EE->load->view('partials/field_settings', $vars, TRUE);;
-	// }
+	/**
+	 * Display a global settings page. The current available global settings are in $this->settings.
+	 *
+	 * @access public
+	 * @return string The global settings form HTML
+	 */
+	public function display_global_settings()
+	{
+		$EE = get_instance();
+		$vars["css"] = isset($this->settings["css"]) ? $this->settings["css"] : "";
+		$vars["input_prefix"] = __CLASS__;
+		return $EE->load->view('/fieldtype/settings', $vars, TRUE);;
+	}
 	
 	/**
 	 * Display the settings form for each custom field

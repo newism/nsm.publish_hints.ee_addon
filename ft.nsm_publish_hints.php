@@ -34,7 +34,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 * @access public
 	 * @var array
 	 */
-	public $settings = array();
+	public $settings = array('css'=> '');
 	public $has_global_settings = true;
 
 	/**
@@ -126,7 +126,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 		$EE = get_instance();
 		$vars["css"] = isset($this->settings["css"]) ? $this->settings["css"] : "";
 		$vars["input_prefix"] = __CLASS__;
-		return $EE->load->view('/fieldtype/settings', $vars, TRUE);;
+		return $EE->load->view('/fieldtype/settings', $vars, TRUE);
 	}
 	
 	/**
@@ -152,6 +152,9 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 */
 	 public function save_global_settings()
 	 {
+		if(!is_array($this->settings))
+			$this->settings = array();
+
 	 	$new_settings = array_merge($this->settings, $this->EE->input->post(__CLASS__));
 	 	return $new_settings;
 	 }

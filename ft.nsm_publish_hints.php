@@ -4,7 +4,7 @@
  * NSM Publish Hints Fieldtype
  *
  * @package			NsmPublishHints
- * @version			1.0.0RC1
+ * @version			1.0.0
  * @author			Leevi Graham <http://leevigraham.com>
  * @copyright 		Copyright (c) 2007-2010 Newism
  * @license 		Commercial - please see LICENSE file included with this distribution
@@ -21,7 +21,7 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	 */
 	public $info = array(
 		'name'		=> 'NSM Publish Hints',
-		'version'	=> '1.0.0RC1'
+		'version'	=> '1.0.0'
 	);
 
 	public $field_id;

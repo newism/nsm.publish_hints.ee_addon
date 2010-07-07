@@ -4,7 +4,7 @@
  * NSM Publish Hints Language File
  *
  * @package			NsmPublishHints
- * @version			1.0.0RC1
+ * @version			1.0.0
  * @author			Leevi Graham <http://leevigraham.com>
  * @copyright 		Copyright (c) 2007-2010 Newism
  * @license 		Commercial - please see LICENSE file included with this distribution

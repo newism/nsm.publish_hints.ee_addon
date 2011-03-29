@@ -1,5 +1,5 @@
-NSM Publish Hints 1.0.0RC1
-==========================
+NSM Publish Hints 1.0.1
+=======================
 
 Overview
 --------
@@ -47,12 +47,6 @@ Technical requirements include:
 3. Enter the publishing hints in the _field instructions_
 4. Save the field and assign the custom field group to a channel.
 5. Publish / Edit an entry.
-
-### Change log
-
-#### 1.0.0 RC1
-
-* Initial Release
 
 Support
 -------

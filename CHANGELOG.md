@@ -1,6 +1,11 @@
 NSM Publish Hints - Changelog
 ===========================
 
+v1.0.2
+------
+
+* [fix] Now compatible with EE 2.8.x
+
 v1.0.1
 ------
 

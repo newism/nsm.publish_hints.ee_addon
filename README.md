@@ -1,4 +1,4 @@
-NSM Publish Hints 1.0.1
+NSM Publish Hints 1.0.2
 =======================
 
 Overview

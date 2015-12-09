@@ -92,7 +92,13 @@ class NSM_publish_hints_ft extends EE_Fieldtype
 	public function display_field($data)
 	{
 		$EE = get_instance();
-		$theme_url = (rtrim($EE->config->item('theme_folder_url'), '/')) . '/third_party/' . $this->field_type;
+
+		if (defined('URL_THIRD_THEMES')) {
+			$theme_url = URL_THIRD_THEMES . $this->field_type;
+		} else {
+			$theme_url = $EE->config->slash_item('theme_folder_url').'third_party/' . $this->field_type;
+		}
+
 		$EE->cp->add_to_head('<link rel="stylesheet" href="'.$theme_url.'/styles/custom_field.css" type="text/css" charset="utf-8" />');
 
 		if(isset($this->settings['css']) && !empty($this->settings['css']))
